@@ -33,4 +33,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: angular-app
-          path: ./dist/kumarsachinguri.github.io/browser
+          path: ./dist/kumarsachinguri.github.io
