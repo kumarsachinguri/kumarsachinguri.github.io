@@ -30,10 +30,8 @@ jobs:
           npm install
           npm run build
           
-    - name: Deploy to gh pages
-      run: |
-        npm i -g angular-cli-ghpages@2.0.0
-        npx angular-cli-ghpages --dir=dist/kumarsachinguri.github.io/browser
-      env:
-        CI: true
-        GH_TOKEN: ${{ secrets.KS_GURI_PROD }}
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
+      with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist/kumarsachinguri.github.io/browser
