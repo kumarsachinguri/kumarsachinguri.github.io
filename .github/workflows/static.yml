@@ -29,3 +29,9 @@ jobs:
     - run: |
           npm install
           npm run build
+    - name: Deploy to gh pages
+      run: |
+        npx angular-cli-ghpages --dir=dist/kumarsachinguri.github.io
+      env:
+        CI: true
+        GH_TOKEN: ${{ secrets.KS_GURI_PROD }}
