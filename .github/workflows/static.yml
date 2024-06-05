@@ -29,12 +29,3 @@ jobs:
     - run: |
           npm install
           npm run build
-
-    - name: Download a Build Artifact  
-      uses: actions/download-artifact@v4.1.7
-          
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
-      with:
-          name: angular-app
-          path: ./dist/kumarsachinguri.github.io/browser
