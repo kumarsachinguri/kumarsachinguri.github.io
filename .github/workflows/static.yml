@@ -29,8 +29,10 @@ jobs:
     - run: |
           npm install
           npm run build
+          
     - name: Deploy to gh pages
       run: |
+        npm i angular-cli-ghpages
         npx angular-cli-ghpages --dir=dist/kumarsachinguri.github.io/browser
       env:
         CI: true
