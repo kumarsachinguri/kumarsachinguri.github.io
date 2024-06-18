@@ -1,0 +1,35 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav-container {
+  flex: 1;
+  margin: 0 !important;
+
+  mat-sidenav {
+    width: 16rem;
+    left: 1rem;
+    bottom: 1rem;
+    border-radius: 0.6rem;
+  }
+}
+
+.is-mobile .sidenav-container {
+  flex: 1 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+  .sidenav-container mat-sidenav {
+    width: 16rem;
+    top: 0 !important;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
