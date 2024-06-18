@@ -7,7 +7,7 @@
     </div>
 
     @for (route of routes; track $index) {
-    <a [routerLink]="[route.route]" routerLinkActive="router-link-active" class="sidenav-link">
+    <a [routerLink]="[route.route]" class="sidenav-link">
       <svg class="sidenav-icon">
         <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
       </svg>
@@ -18,7 +18,7 @@
     <p class="socials">Socials</p>
 
     @for (route of socialMediaLinks; track $index) {
-    <a [routerLink]="[route.route]" routerLinkActive="router-link-active" class="sidenav-link">
+    <a [href]="route.route" target="_blank" class="sidenav-link">
       <svg class="sidenav-icon">
         <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
       </svg>

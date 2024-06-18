@@ -12,7 +12,6 @@ svg {
     text-decoration: none;
     display: flex;
     align-items: center;
-    // justify-content: ;
     gap: 1rem;
     padding: 1rem;
     transition: all 0.3s;
@@ -20,8 +19,6 @@ svg {
     &:hover {
       transform: translateY(-0.2rem);
     }
-  }
-  &-icon {
   }
   &-text {
     font-size: 0.875rem;
