@@ -1,0 +1,41 @@
+svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: rgb(146, 146, 146);
+}
+
+.sidenav {
+  background-color: #1c1b23;
+
+  &-link {
+    color: rgb(114, 114, 114);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    // justify-content: ;
+    gap: 1rem;
+    padding: 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+  &-icon {
+  }
+  &-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.close {
+  cursor: pointer;
+}
+
+.socials {
+  color: rgb(158, 158, 158);
+  padding: 0;
+  margin: 0;
+  margin-top: 1.6rem;
+}
