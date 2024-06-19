@@ -1,0 +1,22 @@
+<div class="row p-3">
+  <div class="col-12 banner">
+    <img class="banner-img" src="images/sk_bg-yellow.png" alt="Sachin Kumar Guri">
+    <div class="banner-text">
+      <h4 class="banner-text__fullname m-0">Sachin Kumar Guri</h4>
+      <p class="banner-text__username m-0">{{'@Kumarsachinguri'}}</p>
+      <p class="banner-text__username m-0">
+        A Software Engineer, Committed to continuous learning and actively shaping the future of software
+        development.
+      </p>
+    </div>
+    <div class="banner-links">
+      @for (route of socialMediaLinks; track $index) {
+      <a [href]="route.route" target="_blank" class="banner-links__item">
+        <svg class="banner-links__icon" [svgHighLight]="route.color">
+          <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
+        </svg>
+      </a>
+      }
+    </div>
+  </div>
+</div>
