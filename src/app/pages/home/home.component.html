@@ -42,3 +42,23 @@
       </div>
     </section>
   </div>
+  <div class="knowledge-card__container">
+    @for (badge of knowledgeBadges; track $index) {
+    <div class="knowledge-card">
+      <p class="knowledge-card__field">
+        {{ badge.field }}
+      </p>
+
+      <div class="knowledge-card__badges">
+        @for (skill of badge.skills; track $index) {
+        <div class="knowledge-card__badges--badge"
+          [ngStyle]="{'border': skill.borderColor ? '1px solid ' + skill.borderColor : '' }">
+          {{ skill.label }}
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </div>
+  </section>
+</div>
