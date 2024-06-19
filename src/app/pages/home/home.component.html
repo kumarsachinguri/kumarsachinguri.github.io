@@ -1,5 +1,5 @@
 <div class="row p-3">
-  <div class="col-12 banner">
+  <section class="col-12 banner">
     <img class="banner-img" src="images/sk_bg-yellow.png" alt="Sachin Kumar Guri">
     <div class="banner-text">
       <h4 class="banner-text__fullname m-0">Sachin Kumar Guri</h4>
@@ -18,5 +18,27 @@
       </a>
       }
     </div>
-  </div>
+  </section>
+
+  <section class="col-12 knowledge">
+    <h4 class="knowledge-heading">What i know</h4>
+
+    <div class="knowledge-card__container">
+      @for (badge of knowledgeBadges; track $index) {
+      <div class="knowledge-card">
+        <p class="knowledge-card__field">
+          {{ badge.field }}
+        </p>
+        <div class="knowledge-card__badges">
+          @for (skill of badge.skills; track $index) {
+          <div class="knowledge-card__badges--badge"
+            [ngStyle]="{'border': skill.borderColor ? '1px solid ' + skill.borderColor : '' }">
+            {{ skill.label }}
+          </div>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </section>
 </div>
