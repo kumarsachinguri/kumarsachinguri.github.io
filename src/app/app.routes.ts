@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Home - KS Guri - Home',
+    title: 'KS Guri - Home',
   },
   { path: 'home', component: HomeComponent, title: 'KS Guri - Home' },
   { path: 'snippets', component: HomeComponent, title: 'KS Guri - Snippets' },
