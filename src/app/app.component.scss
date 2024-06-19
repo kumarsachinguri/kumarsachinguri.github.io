@@ -24,6 +24,11 @@
   flex: 1 0 auto;
 }
 
+.main {
+  padding: 0 1rem 1rem;
+  padding-left: 2rem;
+}
+
 @media screen and (max-width: 992px) {
   .sidenav-container mat-sidenav {
     width: 16rem;
@@ -31,5 +36,8 @@
     left: 0;
     bottom: 0;
     border-radius: 0;
+  }
+  .main {
+    padding-left: 1rem;
   }
 }

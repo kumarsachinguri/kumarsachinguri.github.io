@@ -19,7 +19,7 @@
 
     @for (route of socialMediaLinks; track $index) {
     <a [href]="route.route" target="_blank" class="sidenav-link">
-      <svg class="sidenav-icon">
+      <svg class="sidenav-icon" [ngStyle]="{'fill': route.color}">
         <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
       </svg>
       <span class="sidenav-text">{{ route.label }}</span>
