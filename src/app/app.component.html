@@ -1,9 +1,17 @@
 <div class="content-container" [class.is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="d-flex justify-content-end align-items-center gap-3 bg-black">
-    <button mat-flat-button>
-      <mat-icon>person</mat-icon>
-      Contact me
-    </button>
+  <mat-toolbar color="primary" class="d-flex justify-content-end align-items-center gap-3 bg-black p-3">
+    <a class="link">
+      <svg class="link-icon">
+        <use xlink:href="icons.svg#icon-user"></use>
+      </svg>
+      Contact
+    </a>
+    <a class="link me-lg-3">
+      <svg class="link-icon">
+        <use xlink:href="icons.svg#icon-download"></use>
+      </svg>
+      Resume
+    </a>
     <button mat-icon-button (click)="snav.toggle()" [ngClass]="{'visually-hidden': !mobileQuery.matches}">
       <mat-icon>menu</mat-icon>
     </button>

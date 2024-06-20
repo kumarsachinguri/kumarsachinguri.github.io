@@ -8,6 +8,28 @@
   right: 0;
 }
 
+.link {
+  color: #eee;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.3rem;
+  transition: all 0.3s;
+
+  &-icon {
+    height: 1rem;
+    width: 1rem;
+    fill: #eee;
+  }
+
+  &:hover {
+    transform: translateY(-0.16rem);
+  }
+}
+
 .sidenav-container {
   flex: 1;
   margin: 0 !important;
@@ -27,6 +49,10 @@
 .main {
   padding: 0 1rem 1rem;
   padding-left: 2rem;
+}
+
+mat-icon {
+  color: #eee;
 }
 
 @media screen and (max-width: 992px) {
