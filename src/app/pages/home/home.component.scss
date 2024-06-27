@@ -48,6 +48,59 @@
       display: flex;
       align-items: center;
       gap: 0.3rem;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+/** Projects */
+.project {
+  margin-top: 2rem;
+
+  &-heading {
+    color: #eee;
+    font-size: 1.6rem;
+  }
+
+  &-card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-gap: 1rem;
+  }
+
+  &-card {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+
+    img {
+      height: 70%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.3rem 0.3rem 0 0;
+    }
+
+    &__text {
+      background-color: #eee;
+      border-radius: 0 0 0.3rem 0.3rem;
+      padding: 0.6rem 1rem;
+
+      &--heading {
+        font-size: 0.9rem;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0;
+      }
+      &--para {
+        font-size: 0.775rem;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }
@@ -92,6 +145,11 @@
         padding: 0.3rem 0.6rem;
         border-radius: 0.3rem;
         background-color: #161517;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
