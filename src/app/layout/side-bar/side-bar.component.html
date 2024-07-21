@@ -6,20 +6,27 @@
       </svg>
     </div>
 
-    @for (route of routes; track $index) {
+    @for (route of routes; track $index) { @if (route.newTab) {
+    <a [href]="route.route" target="_blank" class="sidenav-link">
+      <svg class="sidenav-icon">
+        <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
+      </svg>
+      <span class="sidenav-text">{{ route.label }}</span>
+    </a>
+    } @else {
     <a [routerLink]="[route.route]" class="sidenav-link">
       <svg class="sidenav-icon">
         <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
       </svg>
       <span class="sidenav-text">{{ route.label }}</span>
     </a>
-    }
+    } }
 
     <p class="socials">Socials</p>
 
     @for (route of socialMediaLinks; track $index) {
     <a [href]="route.route" target="_blank" class="sidenav-link">
-      <svg class="sidenav-icon" [ngStyle]="{'fill': route.color}">
+      <svg class="sidenav-icon" [ngStyle]="{ fill: route.color }">
         <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
       </svg>
       <span class="sidenav-text">{{ route.label }}</span>
