@@ -13,13 +13,13 @@
     width: 8rem;
     height: 8rem;
     border-radius: 5rem;
-    border: 0.3rem solid #eee;
+    border: 0.3rem solid #ddd;
   }
 
   &-text {
     display: flex;
     flex-direction: column;
-    color: #eee;
+    color: #ddd;
 
     &__fullname {
       font-weight: bold;
@@ -39,7 +39,7 @@
     margin-left: auto;
 
     &__icon {
-      fill: #eee;
+      fill: #ddd;
     }
 
     &__item {
@@ -59,13 +59,6 @@
 
 /** Projects */
 .project {
-  margin-top: 2rem;
-
-  &-heading {
-    color: #eee;
-    font-size: 1.6rem;
-  }
-
   &-card__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -73,18 +66,18 @@
   }
 
   &-card {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     transition: 0.3s ease-in-out;
 
     img {
-      height: 70%;
-      width: 100%;
+      flex: 1;
       object-fit: cover;
       border-radius: 0.3rem 0.3rem 0 0;
     }
 
     &__text {
-      background-color: #eee;
+      background-color: #ddd;
       border-radius: 0 0 0.3rem 0.3rem;
       padding: 0.6rem 1rem;
 
@@ -94,8 +87,20 @@
         line-height: 1;
         margin: 0;
       }
-      &--para {
-        font-size: 0.775rem;
+      &--skills {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+
+        div {
+          width: 0.2rem;
+          height: 0.2rem;
+          background-color: #161517;
+          border-radius: 50%;
+        }
+        cite {
+          font-size: 0.775rem;
+        }
       }
     }
 
@@ -107,13 +112,6 @@
 
 /** Knowledge */
 .knowledge {
-  margin-top: 2rem;
-
-  &-heading {
-    color: #eee;
-    font-size: 1.6rem;
-  }
-
   &-card__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -152,6 +150,49 @@
         }
       }
     }
+  }
+}
+
+/** Hire me Form */
+.hire {
+  &-form {
+    display: grid;
+    max-width: 52rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
+  &-intro {
+    color: #ddd;
+  }
+}
+
+.form {
+  &-label {
+    color: #ddd;
+    display: block;
+    font-size: 0.875rem;
+  }
+  &-input {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #2d2c35;
+    border-radius: 0.6rem;
+    padding: 0.6rem 1rem;
+    color: #ddd;
+    resize: none;
+  }
+  textarea {
+    height: 5rem;
+  }
+
+  &-submit {
+    color: #ddd;
+    padding: 0.6rem 1rem;
+    border: 2px solid #2d2c35;
+    border-radius: 0.6rem;
+    background-color: transparent;
+    font-size: 0.875rem;
   }
 }
 
