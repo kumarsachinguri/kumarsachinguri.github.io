@@ -9,8 +9,8 @@ import { Directive, ElementRef, Input } from '@angular/core';
   standalone: true,
 })
 export class SvgHighlightDirective {
-  @Input('svgHighLight') highlightColor: string = '#eee';
-  private _defaultColor = '#eee';
+  @Input('svgHighLight') highlightColor: string = '#ddd';
+  private _defaultColor = '#ddd';
   private el: HTMLElement;
 
   constructor(el: ElementRef) {
