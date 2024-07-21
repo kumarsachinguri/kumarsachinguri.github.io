@@ -45,7 +45,7 @@
         <a [href]="project.link" target="_blank" class="project-link">
           View more
           <svg class="banner-links__icon">
-            <use xlink:href="icons.svg#icon-arrow-up-right"></use>
+            <use xlink:href="icons.svg#icon-external-link"></use>
           </svg>
         </a>
         }
@@ -88,7 +88,12 @@
       success. Fill out the form below with your project requirements, and let's
       start building something great together!
     </p>
-    <form novalidate class="hire-form" [formGroup]="hireForm" (ngSubmit)="sendMesage()">
+    <form
+      novalidate
+      class="hire-form"
+      [formGroup]="hireForm"
+      (ngSubmit)="sendMesage()"
+    >
       <div class="form-group">
         <label for="fullName" class="form-label"> Full Name </label>
         <input
@@ -130,7 +135,12 @@
         ></textarea>
       </div>
       <div class="form-group">
-        <input type="submit" class="form-submit" value="Send" [disabled]="hireForm.invalid" />
+        <input
+          type="submit"
+          class="form-submit"
+          value="Send"
+          [disabled]="hireForm.invalid"
+        />
       </div>
     </form>
   </section>
