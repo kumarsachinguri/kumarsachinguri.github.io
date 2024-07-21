@@ -14,11 +14,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgStyle, SvgHighlightDirective, ReactiveFormsModule],
+  imports: [NgStyle, RouterLink, SvgHighlightDirective, ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -26,7 +27,6 @@ export class HomeComponent {
   public socialMediaLinks = SOCIAL_MEDIA_LINKS;
   public knowledgeBadges: KnowledgeBadge[] = KNOWLEDGE_BADGES;
   public projects: Project[] = PROJECTS;
-
   public currectYear: number = new Date().getFullYear();
 
   public hireForm: FormGroup = new FormGroup({
