@@ -19,12 +19,12 @@ export class SideBarComponent {
     newTab: boolean;
   }[] = [
     { label: 'Home', icon: '#icon-home', route: '/home', newTab: false },
-    {
-      label: 'Snippets',
-      icon: '#icon-code',
-      route: '/snippets',
-      newTab: false,
-    },
+    // {
+    //   label: 'Snippets',
+    //   icon: '#icon-code',
+    //   route: '/snippets',
+    //   newTab: false,
+    // },
     {
       label: 'Blogs',
       icon: '#icon-edit',
