@@ -1,12 +1,16 @@
 <div class="row p-3">
   <section class="col-12 banner">
-    <img class="banner-img" src="images/sk_bg-yellow.png" alt="Sachin Kumar Guri">
+    <img
+      class="banner-img"
+      src="images/sk_bg-yellow.png"
+      alt="Sachin Kumar Guri"
+    />
     <div class="banner-text">
       <h4 class="banner-text__fullname m-0">Sachin Kumar Guri</h4>
-      <p class="banner-text__username m-0">{{'@Kumarsachinguri'}}</p>
+      <p class="banner-text__username m-0">{{ "@Kumarsachinguri" }}</p>
       <p class="banner-text__username m-0">
-        A Software Engineer, Committed to continuous learning and actively shaping the future of software
-        development.
+        A Software Engineer, Committed to continuous learning and actively
+        shaping the future of software development.
       </p>
     </div>
     <div class="banner-links">
@@ -20,47 +24,38 @@
     </div>
   </section>
 
-  <section class="col-12 project">
-    <h4 class="project-heading">Projects</h4>
+  <section class="col-12 project mt-4">
+    <h4 class="heading-2">Projects</h4>
     <div class="project-card__container">
+      @for (project of projects; track $index) {
       <div class="project-card">
-        <img src="/images/amazon-clone.jpeg" alt="Amazon Clone">
+        <img [src]="'/images/' + project.image" alt="{{ project.heading }}" />
         <div class="project-card__text">
           <h5 class="project-card__text--heading">
-            Amazon Clone
+            {{ project.heading }}
           </h5>
-          <p class="project-card__text--para">
-            Angular, Typescript, .Net Core
-          </p>
+          <div class="project-card__text--skills">
+            @for (skill of project.skills; track $index) {
+            <div></div>
+            <cite>{{ skill }}</cite>
+            }
+          </div>
         </div>
+        @if (project.isLive) {
+        <a [href]="project.link" target="_blank" class="project-link">
+          View more
+          <svg class="banner-links__icon">
+            <use xlink:href="icons.svg#icon-arrow-up-right"></use>
+          </svg>
+        </a>
+        }
       </div>
-      <div class="project-card">
-        <img src="/images/discord-clone.jpeg" alt="Amazon Clone">
-        <div class="project-card__text">
-          <h5 class="project-card__text--heading">
-            Discord Clone
-          </h5>
-          <p class="project-card__text--para">
-            Angular, Typescript, .Net Core
-          </p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="/images/spotify-clone.gif" alt="Amazon Clone">
-        <div class="project-card__text">
-          <h5 class="project-card__text--heading">
-            Spotify Clone
-          </h5>
-          <p class="project-card__text--para">
-            Angular, Typescript, .Net Core
-          </p>
-        </div>
-      </div>
+      }
     </div>
   </section>
 
-  <section class="col-12 knowledge">
-    <h4 class="knowledge-heading">What i know</h4>
+  <section class="col-12 knowledge mt-4">
+    <h4 class="heading-2">What i know</h4>
 
     <div class="knowledge-card__container">
       @for (badge of knowledgeBadges; track $index) {
@@ -71,8 +66,12 @@
 
         <div class="knowledge-card__badges">
           @for (skill of badge.skills; track $index) {
-          <div class="knowledge-card__badges--badge"
-            [ngStyle]="{'border': skill.borderColor ? '1px solid ' + skill.borderColor : '' }">
+          <div
+            class="knowledge-card__badges--badge"
+            [ngStyle]="{
+              border: skill.borderColor ? '1px solid ' + skill.borderColor : ''
+            }"
+          >
             {{ skill.label }}
           </div>
           }
@@ -80,5 +79,59 @@
       </div>
       }
     </div>
+  </section>
+
+  <section class="col-12 hire mt-4">
+    <h4 class="heading-2">Hire me!</h4>
+    <p class="hire-intro">
+      Excited to learn about your projects and how I can contribute to its
+      success. Fill out the form below with your project requirements, and let's
+      start building something great together!
+    </p>
+    <form novalidate class="hire-form" [formGroup]="hireForm">
+      <div class="form-group">
+        <label for="fullName" class="form-label"> Full Name </label>
+        <input
+          type="text"
+          name="fullName"
+          formControlName="fullName"
+          id="fullName"
+          class="form-input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="emailAddress" class="form-label"> Email Address </label>
+        <input
+          type="text"
+          name="emailAddress"
+          formControlName="emailAddress"
+          id="emailAddress"
+          class="form-input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="message" class="form-label"> Message </label>
+        <textarea
+          name="message"
+          formControlName="message"
+          id="message"
+          class="form-input"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="requirements" class="form-label">
+          Project Requirements
+        </label>
+        <textarea
+          name="requirements"
+          formControlName="requirements"
+          id="requirements"
+          class="form-input"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="form-submit" value="Send" />
+      </div>
+    </form>
   </section>
 </div>

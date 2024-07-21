@@ -1,6 +1,8 @@
 .content-container {
   display: flex;
   flex-direction: column;
+  max-width: 2500px;
+  margin: auto;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -9,7 +11,7 @@
 }
 
 .link {
-  color: #eee;
+  color: #ddd;
   font-size: 0.875rem;
   text-decoration: none;
   border-radius: 0.3rem;
@@ -22,7 +24,7 @@
   &-icon {
     height: 1rem;
     width: 1rem;
-    fill: #eee;
+    fill: #ddd;
   }
 
   &:hover {
@@ -52,7 +54,7 @@
 }
 
 mat-icon {
-  color: #eee;
+  color: #ddd;
 }
 
 @media screen and (max-width: 992px) {
