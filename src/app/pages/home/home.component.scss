@@ -222,6 +222,36 @@
   }
 }
 
+.footer {
+  &-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+
+    &__brand {
+      color: #ddd;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    &__links a {
+      color: #ddd;
+      padding: 0.3rem;
+      text-decoration: none;
+    }
+
+    &__text {
+      color: #ddd;
+      font-size: 0.875rem;
+      color: #a2a2a2;
+      margin-bottom: 0;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .banner {
     flex-direction: column;

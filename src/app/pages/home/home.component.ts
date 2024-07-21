@@ -27,6 +27,8 @@ export class HomeComponent {
   public knowledgeBadges: KnowledgeBadge[] = KNOWLEDGE_BADGES;
   public projects: Project[] = PROJECTS;
 
+  public currectYear: number = new Date().getFullYear();
+
   public hireForm: FormGroup = new FormGroup({
     fullName: new FormControl<string>('', [Validators.required]),
     emailAddress: new FormControl<string>('', [Validators.email]),

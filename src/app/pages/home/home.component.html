@@ -24,7 +24,7 @@
     </div>
   </section>
 
-  <section class="col-12 project mt-4">
+  <section class="col-12 project mt-4" id="projects">
     <h4 class="heading-2">Projects</h4>
     <div class="project-card__container">
       @for (project of projects; track $index) {
@@ -54,7 +54,7 @@
     </div>
   </section>
 
-  <section class="col-12 knowledge mt-4">
+  <section class="col-12 knowledge mt-4" id="skills">
     <h4 class="heading-2">What i know</h4>
 
     <div class="knowledge-card__container">
@@ -81,7 +81,7 @@
     </div>
   </section>
 
-  <section class="col-12 hire mt-4">
+  <section class="col-12 hire mt-4" id="hire">
     <h4 class="heading-2">Hire me!</h4>
     <p class="hire-intro">
       Excited to learn about your projects and how I can contribute to its
@@ -144,4 +144,21 @@
       </div>
     </form>
   </section>
+
+  <footer class="col-12 footer mt-5">
+    <div class="footer-menu">
+      <a class="footer-menu__brand" href="#">Sachin Kumar Guri</a>
+      <div class="footer-menu__links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#hire">Leave a request</a>
+      </div>
+    </div>
+    <div class="footer-menu mb-0">
+      <p class="footer-menu__text">
+        © {{ currectYear }} Sachin Kumar Guri. All rights reserved.
+      </p>
+      <p class="footer-menu__text">Privacy Policy</p>
+    </div>
+  </footer>
 </div>
