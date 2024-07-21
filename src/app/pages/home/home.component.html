@@ -88,7 +88,7 @@
       success. Fill out the form below with your project requirements, and let's
       start building something great together!
     </p>
-    <form novalidate class="hire-form" [formGroup]="hireForm">
+    <form novalidate class="hire-form" [formGroup]="hireForm" (ngSubmit)="sendMesage()">
       <div class="form-group">
         <label for="fullName" class="form-label"> Full Name </label>
         <input
@@ -130,7 +130,7 @@
         ></textarea>
       </div>
       <div class="form-group">
-        <input type="submit" class="form-submit" value="Send" />
+        <input type="submit" class="form-submit" value="Send" [disabled]="hireForm.invalid" />
       </div>
     </form>
   </section>

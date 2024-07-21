@@ -8,7 +8,12 @@ import {
 import { NgStyle } from '@angular/common';
 import { Project } from '../../shared/interfaces/project.model';
 import { PROJECTS } from '../../shared/constant/projects.constant';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -28,4 +33,9 @@ export class HomeComponent {
     message: new FormControl<string>('', Validators.required),
     requirements: new FormControl<string>(''),
   });
+
+  public sendMesage() {
+    if (this.hireForm.valid) {
+    }
+  }
 }
