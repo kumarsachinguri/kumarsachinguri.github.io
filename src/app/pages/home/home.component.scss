@@ -65,9 +65,30 @@
     grid-gap: 1rem;
   }
 
+  &-link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 0.3rem;
+    font-size: 0.675rem;
+    background-color: #ffe920;
+    display: flex;
+    align-items: center;
+    color: #161517;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+
+    svg {
+      fill: #1c1b23;
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
   &-card {
     display: flex;
     flex-direction: column;
+    position: relative;
     transition: 0.3s ease-in-out;
 
     img {
@@ -91,15 +112,18 @@
         display: flex;
         align-items: center;
         gap: 0.3rem;
+        overflow-x: auto;
 
         div {
           width: 0.2rem;
           height: 0.2rem;
           background-color: #161517;
           border-radius: 50%;
+          flex-shrink: 0;
         }
         cite {
           font-size: 0.775rem;
+          flex-shrink: 0;
         }
       }
     }

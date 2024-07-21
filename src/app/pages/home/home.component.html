@@ -41,6 +41,14 @@
             }
           </div>
         </div>
+        @if (project.isLive) {
+        <a [href]="project.link" target="_blank" class="project-link">
+          View more
+          <svg class="banner-links__icon">
+            <use xlink:href="icons.svg#icon-arrow-up-right"></use>
+          </svg>
+        </a>
+        }
       </div>
       }
     </div>

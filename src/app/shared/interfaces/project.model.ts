@@ -3,4 +3,6 @@ export interface Project {
   image: string;
   heading: string;
   skills: Array<string>;
+  isLive: boolean;
+  link?: string;
 }
