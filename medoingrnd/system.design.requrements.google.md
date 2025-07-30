@@ -137,7 +137,7 @@ Would you like to dive deeper into any specific area—like how `@angular/compil
 [10]: https://www.reddit.com/r/Angular2/comments/18hjfkf?utm_source=chatgpt.com "Repository pattern in Angular 17"
 [11]: https://www.reddit.com/r/angular/comments/14modtk?utm_source=chatgpt.com "Angular and clean architeture"
 
-#i've lots of questions like:
+# i've lots of questions like:
 
 - it's a single repo and the code base is huge, then how they optimize it and performance or application
 - how do the deployment happen for such a big code base, if it fails then how they rollback and keep it live for about 24x7
