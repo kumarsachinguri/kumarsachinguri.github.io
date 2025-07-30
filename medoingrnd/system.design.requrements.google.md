@@ -137,14 +137,12 @@ Would you like to dive deeper into any specific area—like how `@angular/compil
 [10]: https://www.reddit.com/r/Angular2/comments/18hjfkf?utm_source=chatgpt.com "Repository pattern in Angular 17"
 [11]: https://www.reddit.com/r/angular/comments/14modtk?utm_source=chatgpt.com "Angular and clean architeture"
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-i've lots of questions like:
+#i've lots of questions like:
 
 - it's a single repo and the code base is huge, then how they optimize it and performance or application
 - how do the deployment happen for such a big code base, if it fails then how they rollback and keep it live for about 24x7
 - how this monorepo serves all the applications like angular.dev or packages etc. like these are different applications
 - how the testing happens, do qa executes tests one by one using integration testing or it's part of pipeline(how it's configured), or it's part of development like whenever we push new changes it first tests then pushit.
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Here’s a detailed walkthrough of how Angular’s official monorepo (and many large-scale Angular/Nx-based projects) handle the key areas you asked about:
 
@@ -219,9 +217,7 @@ Here’s a detailed walkthrough of how Angular’s official monorepo (and many l
 
 Do you want to dig into any one of these in more detail? For example, we could show a sample Nx‑based GitHub Actions or GitLab CI workflow for Angular monorepo, or how preview environments and rollback scripting might work.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-teach me system design, tell me everything i need to know in system design to ace an interview for SDE, SDE2,SDE3 at google
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# teach me system design, tell me everything i need to know in system design to ace an interview for SDE, SDE2,SDE3 at google
 
 To **ace a Google SDE (L5), SDE2 (L6), or SDE3+ (senior) interview** in **system design**, you'll need strong foundational knowledge, a structured problem-solving approach, familiarity with real interview scenarios, and very effective communication skills.
 
