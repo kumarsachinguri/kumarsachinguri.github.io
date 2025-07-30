@@ -1,6 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-can you walk me through angular open source git repo architure and explain everything?
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# can you walk me through angular open source git repo architure and explain everything?
 
 Sure! The **Angular framework** (available at **github.com/angular/angular**) is a large **monorepo** that includes core framework libraries, development tools, documentation, testing, and more ([readmex.com][1]). Here’s a structured walkthrough:
 
