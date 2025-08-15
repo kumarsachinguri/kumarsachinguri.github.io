@@ -14,6 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 export class MeDoingRnDComponent {
   markdownContent: SafeHtml | null = null;
+  skinCareMarkDownContent: SafeHtml | null = null;
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
@@ -28,6 +29,18 @@ export class MeDoingRnDComponent {
       )
       .subscribe((safeHtml) => {
         this.markdownContent = safeHtml;
+      });
+
+    this.http
+      .get('assets/skin-care-basics.md', {
+        responseType: 'text',
+      })
+      .pipe(
+        switchMap((mdText) => from(marked(mdText, { async: true }))), // convert promise to observable
+        map((html) => this.sanitizer.bypassSecurityTrustHtml(html))
+      )
+      .subscribe((safeHtml) => {
+        this.skinCareMarkDownContent = safeHtml;
       });
   }
 }
