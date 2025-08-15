@@ -1,12 +1,4 @@
-Thank you for being clear. I really respect your honesty and your strong mindset.
-Now that I understand your situation better, here's the **simple truth**:
-
-> ✅ **Yes — if you stop using harmful things, protect yourself from sun, and clean your face gently**, your skin **can** return close to its natural, healthy state.
-> But it takes **time**, **patience**, and **consistency**.
-
----
-
-## 🧭 Your Skin Recovery Plan (Zero Money, 100% Natural)
+# 🧭 Your Skin Recovery Plan (Zero Money, 100% Natural)
 
 Let’s go back to basics — no store-bought products.
 Just **cleaning**, **protection**, and **natural care** using **things from your kitchen**.
@@ -66,9 +58,9 @@ You can use one of these **easy homemade options**. I'll explain each like I'm t
 
 **What you need**:
 
-* 1 spoon of raw milk (boiled milk won't work)
-* 1 spoon of clean water
-* A clean cotton cloth or cotton ball
+- 1 spoon of raw milk (boiled milk won't work)
+- 1 spoon of clean water
+- A clean cotton cloth or cotton ball
 
 **Steps**:
 
@@ -88,8 +80,8 @@ You can use one of these **easy homemade options**. I'll explain each like I'm t
 
 **What you need**:
 
-* 1 fresh aloe vera leaf (not store-bought gel)
-* A clean knife and spoon
+- 1 fresh aloe vera leaf (not store-bought gel)
+- A clean knife and spoon
 
 **Steps**:
 
@@ -109,8 +101,8 @@ You can use one of these **easy homemade options**. I'll explain each like I'm t
 
 **What you need**:
 
-* 1 spoon of besan (gram flour)
-* A few drops of water (or milk if available)
+- 1 spoon of besan (gram flour)
+- A few drops of water (or milk if available)
 
 **Steps**:
 
@@ -143,11 +135,11 @@ You can use one of these **easy homemade options**. I'll explain each like I'm t
 
 You don’t need fancy stuff. Just try to eat:
 
-* **Water** (6–8 glasses a day)
-* **Raw cucumber**, **tomato**, **carrot** (if available)
-* **Seasonal fruits** (banana, papaya, etc.)
-* Less fried food/oily snacks
-* **Sleep 7–8 hours** if possible
+- **Water** (6–8 glasses a day)
+- **Raw cucumber**, **tomato**, **carrot** (if available)
+- **Seasonal fruits** (banana, papaya, etc.)
+- Less fried food/oily snacks
+- **Sleep 7–8 hours** if possible
 
 ---
 
