@@ -15,6 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 export class MeDoingRnDComponent {
   markdownContent: SafeHtml | null = null;
   skinCareMarkDownContent: SafeHtml | null = null;
+  dietMarkDownContent: SafeHtml | null = null;
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
 
@@ -41,6 +42,17 @@ export class MeDoingRnDComponent {
       )
       .subscribe((safeHtml) => {
         this.skinCareMarkDownContent = safeHtml;
+      });
+    this.http
+      .get('assets/diet-plan.md', {
+        responseType: 'text',
+      })
+      .pipe(
+        switchMap((mdText) => from(marked(mdText, { async: true }))), // convert promise to observable
+        map((html) => this.sanitizer.bypassSecurityTrustHtml(html))
+      )
+      .subscribe((safeHtml) => {
+        this.dietMarkDownContent = safeHtml;
       });
   }
 }
