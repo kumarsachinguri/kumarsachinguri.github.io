@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sachin-guri.github.io": {
+    "kumarsachinguri.github.io": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "outputPath": "dist/sachin-guri.github.io",
+            "outputPath": "dist/kumarsachinguri.github.io",
             "index": "src/index.html",
             "main": "src/main.ts",
             "baseHref": "/",
@@ -27,7 +27,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-               "src/web.config",
+              "src/web.config",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -74,10 +74,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sachin-guri.github.io:build:production"
+              "buildTarget": "kumarsachinguri.github.io:build:production"
             },
             "development": {
-              "buildTarget": "sachin-guri.github.io:build:development"
+              "buildTarget": "kumarsachinguri.github.io:build:development"
             }
           },
           "defaultConfiguration": "development"

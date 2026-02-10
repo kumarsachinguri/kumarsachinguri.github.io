@@ -5,11 +5,10 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,19 +17,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: |
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: |
           npm install --force
           npm run build
-          cp dist/sachin-guri.github.io/index.html dist/sachin-guri.github.io/404.html
+          cp dist/kumarsachinguri.github.io/index.html dist/kumarsachinguri.github.io/404.html
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@v4.4.3
-      with:
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: dist/sachin-guri.github.io
+          folder: dist/kumarsachinguri.github.io

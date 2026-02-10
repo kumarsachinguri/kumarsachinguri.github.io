@@ -13,7 +13,7 @@ export const SOCIAL_MEDIA_LINKS: {
   {
     label: 'Github',
     icon: '#icon-github',
-    route: 'https://github.com/sachin-guri',
+    route: 'https://github.com/kumarsachinguri',
     color: 'rgb(42, 157, 143)',
   },
   {
@@ -25,7 +25,7 @@ export const SOCIAL_MEDIA_LINKS: {
   {
     label: 'LinkedIn',
     icon: '#icon-linkedin',
-    route: 'https://www.linkedin.com/in/sachin-guri/',
+    route: 'https://www.linkedin.com/in/kumarsachinguri/',
     color: 'rgb(2, 119, 181)',
   },
 ];

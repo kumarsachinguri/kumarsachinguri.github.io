@@ -4,10 +4,10 @@ import { RouterLink } from '@angular/router';
 import { SOCIAL_MEDIA_LINKS } from '../../shared/constant/social-media-links.constant';
 
 @Component({
-    selector: 'app-side-bar',
-    imports: [NgStyle, RouterLink],
-    templateUrl: './side-bar.component.html',
-    styleUrl: './side-bar.component.scss'
+  selector: 'app-side-bar',
+  imports: [NgStyle, RouterLink],
+  templateUrl: './side-bar.component.html',
+  styleUrl: './side-bar.component.scss',
 })
 export class SideBarComponent {
   @Output() onToggle: EventEmitter<boolean> = new EventEmitter();
@@ -27,7 +27,7 @@ export class SideBarComponent {
     // {
     //   label: 'Blogs',
     //   icon: '#icon-edit',
-    //   route: 'https://medium.com/@sachin-guri',
+    //   route: 'https://medium.com/@kumarsachinguri',
     //   newTab: true,
     // },
   ];
