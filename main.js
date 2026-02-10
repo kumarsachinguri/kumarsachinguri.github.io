@@ -15232,7 +15232,7 @@ var SOCIAL_MEDIA_LINKS = [
   {
     label: "Github",
     icon: "#icon-github",
-    route: "https://github.com/sachin-guri",
+    route: "https://github.com/kumarsachinguri",
     color: "rgb(42, 157, 143)"
   },
   {
@@ -15244,7 +15244,7 @@ var SOCIAL_MEDIA_LINKS = [
   {
     label: "LinkedIn",
     icon: "#icon-linkedin",
-    route: "https://www.linkedin.com/in/sachin-guri/",
+    route: "https://www.linkedin.com/in/kumarsachinguri/",
     color: "rgb(2, 119, 181)"
   }
 ];
@@ -22594,7 +22594,7 @@ _HomeComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _
   }
   if (rf & 2) {
     \u0275\u0275advance(7);
-    \u0275\u0275textInterpolate("@sachin_guri");
+    \u0275\u0275textInterpolate("@kumarsachinguri");
     \u0275\u0275advance(4);
     \u0275\u0275repeater(ctx.socialMediaLinks);
     \u0275\u0275advance(6);
@@ -22617,14 +22617,10 @@ var HomeComponent = _HomeComponent;
     type: Component,
     args: [{ selector: "app-home", imports: [NgStyle, RouterLink, SvgHighlightDirective, ReactiveFormsModule], template: `<div class="row p-3">
   <section class="col-12 banner">
-    <img
-      class="banner-img"
-      src="images/sk_bg-yellow.png"
-      alt="Sachin Guri"
-    />
+    <img class="banner-img" src="images/sk_bg-yellow.png" alt="Sachin Guri" />
     <div class="banner-text">
       <h4 class="banner-text__fullname m-0">Sachin Guri</h4>
-      <p class="banner-text__username m-0">{{ "@sachin_guri" }}</p>
+      <p class="banner-text__username m-0">{{ "@kumarsachinguri" }}</p>
       <p class="banner-text__username m-0">
         A Software Engineer, Committed to continuous learning and actively
         shaping the future of software development.
@@ -22632,11 +22628,11 @@ var HomeComponent = _HomeComponent;
     </div>
     <div class="banner-links">
       @for (route of socialMediaLinks; track $index) {
-      <a [href]="route.route" target="_blank" class="banner-links__item">
-        <svg class="banner-links__icon" [svgHighLight]="route.color">
-          <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
-        </svg>
-      </a>
+        <a [href]="route.route" target="_blank" class="banner-links__item">
+          <svg class="banner-links__icon" [svgHighLight]="route.color">
+            <use [attr.xlink:href]="'icons.svg' + route.icon"></use>
+          </svg>
+        </a>
       }
     </div>
   </section>
@@ -22645,28 +22641,28 @@ var HomeComponent = _HomeComponent;
     <h4 class="heading-2">Projects</h4>
     <div class="project-card__container">
       @for (project of projects; track $index) {
-      <div class="project-card">
-        <img [src]="'/images/' + project.image" alt="{{ project.heading }}" />
-        <div class="project-card__text">
-          <h5 class="project-card__text--heading">
-            {{ project.heading }}
-          </h5>
-          <div class="project-card__text--skills">
-            @for (skill of project.skills; track $index) {
-            <div></div>
-            <cite>{{ skill }}</cite>
-            }
+        <div class="project-card">
+          <img [src]="'/images/' + project.image" alt="{{ project.heading }}" />
+          <div class="project-card__text">
+            <h5 class="project-card__text--heading">
+              {{ project.heading }}
+            </h5>
+            <div class="project-card__text--skills">
+              @for (skill of project.skills; track $index) {
+                <div></div>
+                <cite>{{ skill }}</cite>
+              }
+            </div>
           </div>
+          @if (project.isLive) {
+            <a [href]="project.link" target="_blank" class="project-link">
+              View more
+              <svg class="banner-links__icon">
+                <use xlink:href="icons.svg#icon-external-link"></use>
+              </svg>
+            </a>
+          }
         </div>
-        @if (project.isLive) {
-        <a [href]="project.link" target="_blank" class="project-link">
-          View more
-          <svg class="banner-links__icon">
-            <use xlink:href="icons.svg#icon-external-link"></use>
-          </svg>
-        </a>
-        }
-      </div>
       }
     </div>
   </section>
@@ -22676,24 +22672,26 @@ var HomeComponent = _HomeComponent;
 
     <div class="knowledge-card__container">
       @for (badge of knowledgeBadges; track $index) {
-      <div class="knowledge-card">
-        <p class="knowledge-card__field">
-          {{ badge.field }}
-        </p>
+        <div class="knowledge-card">
+          <p class="knowledge-card__field">
+            {{ badge.field }}
+          </p>
 
-        <div class="knowledge-card__badges">
-          @for (skill of badge.skills; track $index) {
-          <div
-            class="knowledge-card__badges--badge"
-            [ngStyle]="{
-              border: skill.borderColor ? '1px solid ' + skill.borderColor : ''
-            }"
-          >
-            {{ skill.label }}
+          <div class="knowledge-card__badges">
+            @for (skill of badge.skills; track $index) {
+              <div
+                class="knowledge-card__badges--badge"
+                [ngStyle]="{
+                  border: skill.borderColor
+                    ? '1px solid ' + skill.borderColor
+                    : '',
+                }"
+              >
+                {{ skill.label }}
+              </div>
+            }
           </div>
-          }
         </div>
-      </div>
       }
     </div>
   </section>
@@ -22825,7 +22823,7 @@ _PolicyComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type:
     \u0275\u0275domElement(19, "br");
     \u0275\u0275text(20, " 2.2. Blocking of personal data \u2014 temporary cessation of processing of personal data (except for cases when processing is necessary to clarify personal data). ");
     \u0275\u0275domElement(21, "br");
-    \u0275\u0275text(22, " 2.3. Website \u2014 a set of graphic and information materials, as well as computer programs and databases that ensure their availability on the Internet at the network address https://sachin-guri.github.io/ . ");
+    \u0275\u0275text(22, " 2.3. Website \u2014 a set of graphic and information materials, as well as computer programs and databases that ensure their availability on the Internet at the network address https://kumarsachinguri.github.io/ . ");
     \u0275\u0275domElement(23, "br");
     \u0275\u0275text(24, " 2.4. Personal data information system \u2014 a set of personal data contained in databases and the information technologies and technical means that ensure their processing. ");
     \u0275\u0275domElement(25, "br");
@@ -22835,11 +22833,11 @@ _PolicyComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type:
     \u0275\u0275domElement(29, "br");
     \u0275\u0275text(30, " 2.7. Operator \u2014 a state body, municipal body, legal entity or individual that, independently or jointly with other persons, organizes and/or carries out the processing of personal data, as well as determines the purposes of processing personal data, the composition of personal data subject to processing, actions (operations) performed with personal data. ");
     \u0275\u0275domElement(31, "br");
-    \u0275\u0275text(32, " 2.8. Personal data \u2014 any information relating directly or indirectly to a specific or determinable User of the website https://sachin-guri.github.io/ . ");
+    \u0275\u0275text(32, " 2.8. Personal data \u2014 any information relating directly or indirectly to a specific or determinable User of the website https://kumarsachinguri.github.io/ . ");
     \u0275\u0275domElement(33, "br");
     \u0275\u0275text(34, " 2.9. Personal data permitted for distribution by the personal data subject \u2014 personal data, access to which by an unlimited number of persons is granted by the personal data subject by giving consent to the processing of personal data permitted by the personal data subject for distribution in the manner prescribed by the Law on Personal Data. ");
     \u0275\u0275domElement(35, "br");
-    \u0275\u0275text(36, " 2.10. User \u2014 any visitor to the website https://sachin-guri.github.io/ . ");
+    \u0275\u0275text(36, " 2.10. User \u2014 any visitor to the website https://kumarsachinguri.github.io/ . ");
     \u0275\u0275domElement(37, "br");
     \u0275\u0275text(38, " 2.11. Provision of personal data \u2014 actions aimed at disclosing personal data to a specific person or a specific group of persons. ");
     \u0275\u0275domElement(39, "br");
@@ -22862,7 +22860,7 @@ var PolicyComponent = _PolicyComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PolicyComponent, [{
     type: Component,
-    args: [{ selector: "app-policy", imports: [], template: '<h4 class="heading-3">Personal data processing policy</h4>\n<h6 class="heading-4">1. General Provisions</h6>\n<p class="text">\n  This personal data processing policy has been drawn up in accordance with the\n  requirements of the <strong>DEPARTMENT OF JUSTICE INDIA</strong> "Privacy\n  Policy"\n</p>\n<p class="text">\n  We does not automatically capture any specific personal information from you,\n  (like name, phone number or e-mail address), that allows us to identify you\n  individually. If the Department of Justice requests you to provide personal\n  information, you will be informed for the particular purposes for which the\n  information is gathered and adequate security measures will be taken to\n  protect your personal information. <br />\n  We do not sell or share any personally identifiable information volunteered on\n  the Website to any third party (public/private). Any information provided to\n  this website will be protected from loss, misuse, unauthorized access or\n  disclosure, alteration, or destruction. We gather certain information about\n  the User, such as Internet protocol (IP) addresses, domain name, browser type,\n  operating system, the date and time of the visit and the pages visited. <br />\n  We make no attempt to link these addresses with the identity of individuals\n  visiting our site unless an attempt to damage the site has been detected.\n</p>\n\n<h6 class="heading-4">2. Basic concepts used in the Policy</h6>\n<p class="text">\n  2.1. Automated processing of personal data \u2014 processing of personal data using\n  computer technology. <br />\n  2.2. Blocking of personal data \u2014 temporary cessation of processing of personal\n  data (except for cases when processing is necessary to clarify personal data).\n  <br />\n  2.3. Website \u2014 a set of graphic and information materials, as well as computer\n  programs and databases that ensure their availability on the Internet at the\n  network address https://sachin-guri.github.io/ . <br />\n  2.4. Personal data information system \u2014 a set of personal data contained in\n  databases and the information technologies and technical means that ensure\n  their processing. <br />\n  2.5. Depersonalization of personal data \u2014 actions as a result of which it is\n  impossible to determine without the use of additional information the\n  ownership of personal data by a specific User or another subject of personal\n  data. <br />\n  2.6. Personal data processing \u2014 any action (operation) or set of actions\n  (operations) performed with the use of automation tools or without the use of\n  such tools with personal data, including collection, recording,\n  systematization, accumulation, storage, clarification (updating,\n  modification), retrieval, use, transfer (distribution, provision, access),\n  depersonalization, blocking, deletion, destruction of personal data. <br />\n  2.7. Operator \u2014 a state body, municipal body, legal entity or individual that,\n  independently or jointly with other persons, organizes and/or carries out the\n  processing of personal data, as well as determines the purposes of processing\n  personal data, the composition of personal data subject to processing, actions\n  (operations) performed with personal data. <br />\n  2.8. Personal data \u2014 any information relating directly or indirectly to a\n  specific or determinable User of the website\n  https://sachin-guri.github.io/ . <br />\n  2.9. Personal data permitted for distribution by the personal data subject \u2014\n  personal data, access to which by an unlimited number of persons is granted by\n  the personal data subject by giving consent to the processing of personal data\n  permitted by the personal data subject for distribution in the manner\n  prescribed by the Law on Personal Data. <br />\n  2.10. User \u2014 any visitor to the website https://sachin-guri.github.io/ .\n  <br />\n  2.11. Provision of personal data \u2014 actions aimed at disclosing personal data\n  to a specific person or a specific group of persons. <br />\n  2.12. Dissemination of personal data \u2014 any actions aimed at disclosing\n  personal data to an indefinite number of persons (transfer of personal data)\n  or familiarizing an unlimited number of persons with personal data, including\n  the publication of personal data in the media, posting in information and\n  telecommunications networks or providing access to personal data in any other\n  way. <br />\n  2.13. Cross-border transfer of personal data \u2014 transfer of personal data to\n  the territory of a foreign state to a government body of a foreign state, a\n  foreign individual or a foreign legal entity. <br />\n  2.14. Destruction of personal data \u2014 any actions as a result of which personal\n  data are irrevocably destroyed with the impossibility of further restoration\n  of the content of personal data in the personal data information system and/or\n  the destruction of tangible media of personal data.\n</p>\n\n<footer class="mt-5">\n  <p class="text p-0">\n    \xA9 {{ currectYear }} Sachin Kumar Guri. All rights reserved.\n  </p>\n</footer>\n', styles: ["/* src/app/pages/policy/policy.component.scss */\n* {\n  color: #ddd;\n}\n.text {\n  color: #a2a2a2;\n  padding: 0 1.6rem;\n}\n"] }]
+    args: [{ selector: "app-policy", imports: [], template: '<h4 class="heading-3">Personal data processing policy</h4>\n<h6 class="heading-4">1. General Provisions</h6>\n<p class="text">\n  This personal data processing policy has been drawn up in accordance with the\n  requirements of the <strong>DEPARTMENT OF JUSTICE INDIA</strong> "Privacy\n  Policy"\n</p>\n<p class="text">\n  We does not automatically capture any specific personal information from you,\n  (like name, phone number or e-mail address), that allows us to identify you\n  individually. If the Department of Justice requests you to provide personal\n  information, you will be informed for the particular purposes for which the\n  information is gathered and adequate security measures will be taken to\n  protect your personal information. <br />\n  We do not sell or share any personally identifiable information volunteered on\n  the Website to any third party (public/private). Any information provided to\n  this website will be protected from loss, misuse, unauthorized access or\n  disclosure, alteration, or destruction. We gather certain information about\n  the User, such as Internet protocol (IP) addresses, domain name, browser type,\n  operating system, the date and time of the visit and the pages visited. <br />\n  We make no attempt to link these addresses with the identity of individuals\n  visiting our site unless an attempt to damage the site has been detected.\n</p>\n\n<h6 class="heading-4">2. Basic concepts used in the Policy</h6>\n<p class="text">\n  2.1. Automated processing of personal data \u2014 processing of personal data using\n  computer technology. <br />\n  2.2. Blocking of personal data \u2014 temporary cessation of processing of personal\n  data (except for cases when processing is necessary to clarify personal data).\n  <br />\n  2.3. Website \u2014 a set of graphic and information materials, as well as computer\n  programs and databases that ensure their availability on the Internet at the\n  network address https://kumarsachinguri.github.io/ . <br />\n  2.4. Personal data information system \u2014 a set of personal data contained in\n  databases and the information technologies and technical means that ensure\n  their processing. <br />\n  2.5. Depersonalization of personal data \u2014 actions as a result of which it is\n  impossible to determine without the use of additional information the\n  ownership of personal data by a specific User or another subject of personal\n  data. <br />\n  2.6. Personal data processing \u2014 any action (operation) or set of actions\n  (operations) performed with the use of automation tools or without the use of\n  such tools with personal data, including collection, recording,\n  systematization, accumulation, storage, clarification (updating,\n  modification), retrieval, use, transfer (distribution, provision, access),\n  depersonalization, blocking, deletion, destruction of personal data. <br />\n  2.7. Operator \u2014 a state body, municipal body, legal entity or individual that,\n  independently or jointly with other persons, organizes and/or carries out the\n  processing of personal data, as well as determines the purposes of processing\n  personal data, the composition of personal data subject to processing, actions\n  (operations) performed with personal data. <br />\n  2.8. Personal data \u2014 any information relating directly or indirectly to a\n  specific or determinable User of the website\n  https://kumarsachinguri.github.io/ . <br />\n  2.9. Personal data permitted for distribution by the personal data subject \u2014\n  personal data, access to which by an unlimited number of persons is granted by\n  the personal data subject by giving consent to the processing of personal data\n  permitted by the personal data subject for distribution in the manner\n  prescribed by the Law on Personal Data. <br />\n  2.10. User \u2014 any visitor to the website https://kumarsachinguri.github.io/ .\n  <br />\n  2.11. Provision of personal data \u2014 actions aimed at disclosing personal data\n  to a specific person or a specific group of persons. <br />\n  2.12. Dissemination of personal data \u2014 any actions aimed at disclosing\n  personal data to an indefinite number of persons (transfer of personal data)\n  or familiarizing an unlimited number of persons with personal data, including\n  the publication of personal data in the media, posting in information and\n  telecommunications networks or providing access to personal data in any other\n  way. <br />\n  2.13. Cross-border transfer of personal data \u2014 transfer of personal data to\n  the territory of a foreign state to a government body of a foreign state, a\n  foreign individual or a foreign legal entity. <br />\n  2.14. Destruction of personal data \u2014 any actions as a result of which personal\n  data are irrevocably destroyed with the impossibility of further restoration\n  of the content of personal data in the personal data information system and/or\n  the destruction of tangible media of personal data.\n</p>\n\n<footer class="mt-5">\n  <p class="text p-0">\n    \xA9 {{ currectYear }} Sachin Kumar Guri. All rights reserved.\n  </p>\n</footer>\n', styles: ["/* src/app/pages/policy/policy.component.scss */\n* {\n  color: #ddd;\n}\n.text {\n  color: #a2a2a2;\n  padding: 0 1.6rem;\n}\n"] }]
   }], null, null);
 })();
 (() => {
@@ -38583,7 +38581,7 @@ var _SideBarComponent = class _SideBarComponent {
       // {
       //   label: 'Blogs',
       //   icon: '#icon-edit',
-      //   route: 'https://medium.com/@sachin-guri',
+      //   route: 'https://medium.com/@kumarsachinguri',
       //   newTab: true,
       // },
     ];
